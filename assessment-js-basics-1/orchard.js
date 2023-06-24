@@ -27,10 +27,12 @@
     in cents. 
 */
 
+// const Dotw =   [M, T, W, T, F, S, S]
 const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
 const galaAcres = [5, 2, 4, 3, 6, 2, 4]
 const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 
+// price per pound in cents
 const fujiPrice = .89 
 const galaPrice = .64
 const pinkPrice = .55
@@ -50,8 +52,20 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+// The best way I could think of to answer this question was to make three for loops. Each one would iterate through it's array and add the sum to the totalacres variable. holding the sum of all three arrays.
+let totalAcres = 0;
 
+for(let i=0; i<fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i];
+}
+for(let i=0; i<galaAcres.length; i++) {
+    totalAcres += galaAcres[i];
+}
+for(let i=0; i<pinkAcres.length; i++) {
+    totalAcres += pinkAcres[i];
+}
 
+console.log(totalAcres);
 
 
 
@@ -68,9 +82,10 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+// to find the average number of acres pricked per day I made a variable and set the value to totalacres divided by the number of days in a week
+let averageDailyAcres = totalAcres / 7
 
-
-
+console.log(averageDailyAcres);
 
 
 // PROBLEM 3
@@ -102,12 +117,19 @@ const pinkPrice = .55
 
 */
 
+// number of acres that still have apples left
 let acresLeft = 174 
+// how many more days of work are left
 let days = 0
 
 // CODE HERE
+// I set my while loop up and added the argument within the parenthesis() and if so is true then add 1 and set days new value to that. Then subtract averagedailyacres from acresleft and run the loop into acresleft is less then 0
+while (acresLeft > 0) {
+    days += 1 
+    acresLeft -= averageDailyAcres
+}
 
-
+console.log(days);
 
 // PROBLEM 4
 
@@ -134,14 +156,23 @@ let days = 0
 */
 
 // CODE HERE
+// Each acre yields 6.5 tons of apples.
+// My understanding of the question was to multiply each number (which is the number of acres that were picked that day) in the array by 6.5 tons of apples which is (amount of apples picked per ton). I made an empty array, built a for loop to iterate through the array and execute each number by 6.5 then added it to the empty array. I repeated the process for each empty array.
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+for(let i=0; i<fujiAcres.length; i++) {
+    fujiTons.push(fujiAcres[i] * 6.5);
+}
+for(let i=0; i<galaAcres.length; i++) {
+    galaTons.push(galaAcres[i] * 6.5);
+}
+for(let i=0; i<pinkAcres.length; i++) {
+    pinkTons.push(pinkAcres[i] * 6.5);
+}
 
-
-
-
+console.log(fujiTons + '\n' + galaTons + '\n' + pinkTons );
 
 
 // PROBLEM 5
@@ -161,18 +192,29 @@ let days = 0
 */
 
 // CODE HERE 
+// to find out how many lb I had per tons of each variety I added the the tons per each variety using an array method then set the value of the three vaiables down below to the mathmateical equation of total tons plus lb in ton.
+let lbInTon = 2000
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+const totalFujiTons = fujiTons.reduce((a, b) => a + b )
+
+const totalGalaTons = galaTons.reduce((a, b) => a + b )
 
 
+const totalPinkTons = pinkTons.reduce((a, b) => a + b )
 
+// console.log(totalFujiTons + '\n' + totalGalaTons + '\n' + totalPinkTons);
 
+fujiPounds = totalFujiTons * lbInTon;
+galaPounds = totalGalaTons * lbInTon;
+pinkPounds = totalPinkTons * lbInTon;
 
+console.log(fujiPounds + '\n' + galaPounds + '\n' + pinkPounds);
 
 // PROBLEM 6
-
+// 
 /*
     Now that you know the total pounds
     per variety, use the prices given 
@@ -188,12 +230,17 @@ let days = 0
 */
 
 // CODE HERE
+// to find the profit each variety will make from the harvest I set the profit variable to the variety pound and multiplied by the price in cents per pound.
+// price per pound in cents
+// const fujiPrice = .89 
+// const galaPrice = .64
+// const pinkPrice = .55
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
 
-
+console.log(fujiProfit + '\n' + galaProfit + '\n' + pinkProfit);
 
 
 
@@ -209,3 +256,6 @@ let days = 0
 */
 
 // CODE HERE
+const totalProfit = fujiProfit + (galaProfit + pinkProfit);
+
+console.log(totalProfit);

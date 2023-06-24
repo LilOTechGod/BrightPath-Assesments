@@ -11,6 +11,8 @@
 
 //CODE HERE
 
+const gitDefinition = 'Git is a version control system software';
+
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,6 +20,8 @@
 */
 
 //CODE HERE
+
+const gitHubDefinition = 'A cloud-based git repository hosting service';
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -27,6 +31,8 @@
 
 //CODE HERE
 
+const gitInitDefinition = 'git init is a git command that initializes a new repo through the terminal or command line';
+
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -35,6 +41,8 @@
 
 //CODE HERE
 
+const gitCloneDefinition = 'git clone is a git command that makes a copy of a repo from github to your local machine';
+
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -42,6 +50,8 @@
 */
 
 //CODE HERE
+
+const gitStatusDefinition = 'git status is a git command that allows git to return a message stating what you need to do in order to finish the process depending what it is your trying to do';
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -54,6 +64,9 @@
 
 //CODE HERE
 
+const gitAddDefinition = 'Its a git command that adds any files, folder and content within from your local machine to your github repo from the terminal or command line'
+const gitAddCode = 'git add .';
+
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
@@ -65,6 +78,8 @@
 
 //CODE HERE
 
+const gitCommitDefinition = 'Its a git command that is used to save changes to a local repository. It created a snapshot of your repo and you can also add a message with the saved changes'
+const gitCommitCode = 'git commit -m"inital commit"';
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +88,5 @@
 */
 
 //CODE HERE
+
+const gitPushDefinition = 'Its a git command that allows you to push all of your local saved changes to your cloud repo, so that it may be on there as well';
