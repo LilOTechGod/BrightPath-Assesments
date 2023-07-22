@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body class="container">
 
-    <section>
+    <section class="sec1">
+      <h1>Click below to get a compliment on the house</h1>
       <button id="complimentButton">Get a compliment</button>
     </section>
 
@@ -15,12 +17,47 @@
     </section>
 
     <section>
-      <h2>Add your own fortune! Inspire someone today</h2>
-      <button id="addFortuneBtn">Add your fortune:</button>
-      <input type="text" placeholder="type here" id="addFortuneInput">
-      <div id="poulateFortune"></div>
+      <h2 class="movieTitle">Now, What Movie will you watch today?</h2>
+      <div id="populateMovie"></div>
+      <h1>Add A Movie</h1>
+      <form id="add-movie">
+        <label for="newTitle">Title:</label>
+        <input type="text" id="newTitle" placeholder="Enter movie title here!">
+        <br>
+        <label for="newDirector">Director:</label>
+        <input type="text" id="newDirector" placeholder="Enter director of movie">
+        <br>
+        <label for="newReleaseYear">Release Year:</label>
+        <input type="text" id="newReleaseYear" placeholder="Enter release year of movie">
+        <br>
+        <br>
+        <button type="submit">Add A Movie!</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Update A Movie</h3>
+      <form id="update-movie">
+        <label for="movie-id">Movie Id</label>
+        <input type="number" id="movie-id">
+        <br>
+        <label for="update-title">Title:</label>
+        <input type="text" id="update-title" placeholder="Enter movie title here!">
+        <br>
+        <label for="update-director">Director:</label>
+        <input type="text" id="update-director" placeholder="Enter director of movie">
+        <br>
+        <label for="update-releaseYear">Release Year:</label>
+        <input type="text" id="update-releaseYear" placeholder="Enter release year of movie">
+        <br>
+        <br>
+        <button type="submit">Update A Movie</button>
+      </form>
     </section>
     
+    <section id="display-setion">
+
+    </section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

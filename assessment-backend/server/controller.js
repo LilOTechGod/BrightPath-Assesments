@@ -84,7 +84,7 @@ module.exports = {
     editMovie: (req, res) => {
         let {id} = req.params;
         let {newTitle, newDirector, newReleaseYear} = req.query;
-
+        // use the id to locate the object
         let index = movieDb.findIndex((pelicula) => pelicula.id === +id);
         if(index === -1) {
             res.status(400).send('movie not found');
